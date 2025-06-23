@@ -1,6 +1,6 @@
 {
-  "title": "Gaeton Transit Dynmap",
   "pluginversion": "3.7-SNAPSHOT-990",
+  "title": "Gaeton Transit Dynmap",
   "prefix": "",
   "tiles": "tiles/",
   "markers": "markers/",
