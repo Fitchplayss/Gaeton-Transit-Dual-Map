@@ -1,8 +1,10 @@
 var config = {
-  title: "Gaeton Transit Dynmap",
-  prefix: "",
-  tiles: "tiles/",
-  markers: "markers/",
+  configuration: {
+    title: "Gaeton Transit Dynmap",
+    prefix: "",
+    tiles: "tiles/",
+    markers: "markers/"
+  },
   worlds: [
     { name: "world", title: "Overworld", icon: "world.png" },
     { name: "world_nether", title: "Nether", icon: "nether.png" },
