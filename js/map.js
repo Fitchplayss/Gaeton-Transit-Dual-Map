@@ -24,6 +24,10 @@ function DynMap(options) {
 	var me = this;
 	if(me.checkForSavedURL())
 		return;
+	
+	this.options = options;
+    	this.options.pluginversion = "3.7-SNAPSHOT-990";
+
 	me.options = options;
 	$.getJSON(me.formatUrl("configuration", { timestamp: me.lasttimestamp }), function(configuration) {
 		if(configuration.error == 'login-required') {
