@@ -1,14 +1,16 @@
-{
-  "title": "Gaeton Transit Dynmap",
-  "prefix": "",
-  "tiles": "tiles/",
-  "markers": "markers/",
-  "worlds": [
-    { "name": "world", "title": "Overworld", "icon": "world.png" },
-    { "name": "world_nether", "title": "Nether", "icon": "nether.png" },
-    { "name": "world_the_end", "title": "The End", "icon": "the_end.png" }
+var config = {
+  configuration: {
+    title: "Gaeton Transit Dynmap",
+    prefix: "",
+    tiles: "tiles/",
+    markers: "markers/"
+  },
+  worlds: [
+    { name: "world", title: "Overworld", icon: "world.png" },
+    { name: "world_nether", title: "Nether", icon: "nether.png" },
+    { name: "world_the_end", title: "The End", icon: "the_end.png" }
   ],
-  "maps": {
+  maps: {
     "world": {
       "flat": {
         "title": "Flat",
@@ -34,4 +36,4 @@
       }
     }
   }
-}
+};
