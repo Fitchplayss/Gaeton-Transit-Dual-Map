@@ -83,9 +83,8 @@ DynMap.prototype = {
 	    url = url.replace("{" + n + "}", encodeURIComponent(v));
 	  });
 	  return url;
-	}
-
 	},
+	
 	configure: function(configuration) {
 		var me = this;
 		$.extend(me.options, configuration);
