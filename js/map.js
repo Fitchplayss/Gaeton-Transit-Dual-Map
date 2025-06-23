@@ -26,7 +26,7 @@ function DynMap(options) {
 		return;
 	
 	me.options = options;
-	me.options.pluginversion = dynmapversion;
+	me.options.pluginversion = window.dynmapversion;
 
 	$.getJSON(me.formatUrl("configuration", { timestamp: me.lasttimestamp }), function(configuration) {
 		if(configuration.error == 'login-required') {
