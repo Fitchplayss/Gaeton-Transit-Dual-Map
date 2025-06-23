@@ -1,5 +1,5 @@
 var config = {
-  title: "Dynmap",
+  title: "Gaeton Transit Dynmap",
   prefix: "",
   tiles: "tiles/",
   markers: "markers/",
