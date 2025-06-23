@@ -84,7 +84,6 @@ DynMap.prototype = {
 	  });
 	  return url;
 	},
-	
 	configure: function(configuration) {
 		var me = this;
 		$.extend(me.options, configuration);
