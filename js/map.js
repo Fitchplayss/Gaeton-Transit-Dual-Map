@@ -182,7 +182,7 @@ DynMap.prototype = {
 		if(sidebaropen == 'false' || sidebaropen == 'true' || sidebaropen == 'pinned')
 			me.options.sidebaropened = sidebaropen;
 
-		var map = this.map = new L.Map(mapContainer.get(0), {
+		var map = me.map = new L.Map(mapContainer.get(0), {
 			zoom: me.options.defaultzoom,
 			center: new L.LatLng(0, 0),
 			zoomAnimation: true,
@@ -576,7 +576,8 @@ DynMap.prototype = {
 		}
 	},
 	selectMap: function(map, completed) {
-		this.selectMapAndPan(map, null, completed);
+		var me = this;
+		me.selectMapAndPan(map, null, completed);
 	},
 	selectWorldAndPan: function(world, location, completed) {
 		var me = this;
@@ -594,7 +595,7 @@ DynMap.prototype = {
 		me.selectMapAndPan(world.defaultmap, location, completed);
 	},
 	selectWorld: function(world, completed) {
-		this.selectWorldAndPan(world, null, completed);
+		me.selectWorldAndPan(world, null, completed);
 	},
 	panToLocation: function(location, completed) {
 		var me = this;
@@ -614,7 +615,7 @@ DynMap.prototype = {
 		}
 	},
 	panToLatLng: function(latlng, completed) {
-		this.map.panTo(latlng);
+		me.map.panTo(latlng);
 		if (completed) {
 			completed();
 		}
@@ -746,7 +747,7 @@ DynMap.prototype = {
 
 		if(tile == null) {
 			var url = me.options.url.tiles;
-			tile = this.registeredTiles[tileName] = url + escape(me.world.name + '/' + tileName);
+			tile = me.registeredTiles[tileName] = url + escape(me.world.name + '/' + tileName);
 		}
 		return tile;
 	},
