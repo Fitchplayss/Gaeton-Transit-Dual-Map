@@ -72,11 +72,19 @@ DynMap.prototype = {
 	nocompass: false,
 	
 	formatUrl: function(name, options) {
-		var url = this.options.url[name];
-		$.each(options, function(n,v) {
-			url = url.replace("{" + n + "}", encodeURIComponent(v));
-		});
-		return url;
+	  // Use fixed paths since config.configuration.url is missing on static hosting
+	  var baseUrls = {
+	    tiles: "tiles/world/flat/{filename}",
+	    markers: "tiles/_markers_/{markerid}.json"
+	  };
+
+	  var url = baseUrls[name] || "";
+	  $.each(options, function(n,v) {
+	    url = url.replace("{" + n + "}", encodeURIComponent(v));
+	  });
+	  return url;
+	}
+
 	},
 	configure: function(configuration) {
 		var me = this;
