@@ -85,14 +85,7 @@ DynMap.prototype = {
 	  });
 	  return url;
 	},
-
-
-	  var url = baseUrls[name] || "";
-	  $.each(options, function(n,v) {
-	    url = url.replace("{" + n + "}", encodeURIComponent(v));
-	  });
-	  return url;
-	},
+	
 	configure: function(configuration) {
 		var me = this;
 		$.extend(me.options, configuration);
