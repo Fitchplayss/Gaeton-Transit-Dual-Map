@@ -1,6 +1,6 @@
 var config = {
   configuration: {
-    title: "Gaeton Transit Dynmap",
+    title: "Gaeton Transit Dual Map",
     prefix: "",
     tiles: "tiles/",
     markers: "markers/"
